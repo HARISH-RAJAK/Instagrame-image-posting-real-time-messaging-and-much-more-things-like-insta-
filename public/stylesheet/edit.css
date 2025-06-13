@@ -1,0 +1,6 @@
+.profile-pic {
+  transition: 0.3s ease;
+}
+.profile-pic:hover {
+  opacity: 0.8;
+}
