@@ -10,11 +10,10 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const expressSession = require('express-session');
 const mongoose = require('mongoose');
-const app = express();
-
-
 var userRouter = require('./routes/user');
 var indexRouter = require('./routes/index');
+const app = express();
+
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +23,8 @@ app.use(express.static('./public'));
 app.use(expressSession({
     secret: 'harish_is_the_king',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+   
 }));
 
 app.use(passport.initialize());
