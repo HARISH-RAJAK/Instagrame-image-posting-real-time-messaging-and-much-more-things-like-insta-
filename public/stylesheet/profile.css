@@ -1,258 +1,262 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-   
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+
 }
 
 .icons img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
 #plus-icon {
-    height: 2rem;
-    width: 2rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
 }
 
 .icons img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .story img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 
 .story-bar {
-    overflow-x: auto;
-    white-space: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .story-bar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .story {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
 }
 
 .story img {
-    width: 1rem;
-    height: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 #plus-icon {
-    width: 1rem;
-    height: 1rem;
-    object-fit: contain;
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
 }
 
 .plus-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 1rem;
-    height: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
 }
 
 .story h4 {
-    font-size: 0.8rem;
-    margin: 0;
-    text-align: center;
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: center;
 }
 
 .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
 .story-bar {
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    gap: 15px;
-    padding-bottom: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px;
 }
 
 .story-bar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .story {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .story img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .plus-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
 }
 
 .icons {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .sticky-bottom-bar {
-    position: fixed; /* Keep it fixed at the bottom */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff; /* Background color */
-    z-index: 1030; /* Stays above other elements */
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 8px 0;
+  position: fixed;
+  /* Keep it fixed at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  /* Background color */
+  z-index: 1030;
+  /* Stays above other elements */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 8px 0;
 }
 
 .sticky-bottom-bar .icons img {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 0;
 
 }
 
 .story-bar {
-    overflow-x: auto;
-    white-space: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .story-bar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .story {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .story img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .profile-img {
-    height: 5rem;
-    width: 5rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 .profile-img {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 
 .plus-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    border: 2px solid white;
-    /* Optional: for clean overlay */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  /* Optional: for clean overlay */
 }
 
 .profile-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .plus-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    bottom: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-    border: 2px solid white;
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  border: 2px solid white;
 }
 
 .position-relative .plus-icon {
-    position: absolute;
+  position: absolute;
 }
 
 .icons {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
 
 .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
 }
 
 .top-bar {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 0;
 }
 
 .icons img {
@@ -385,15 +389,43 @@ body {
   padding: 10px 0;
 }
 
+.post-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* makes it a square */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
 
+.post-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ensures the image fills the square without distortion */
+  display: block;
+}
 
+.post-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
 
+.post-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
+/* Zoom + dim effect on hover */
+.post-img-wrapper:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}

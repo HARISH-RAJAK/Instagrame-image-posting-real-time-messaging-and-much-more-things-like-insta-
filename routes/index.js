@@ -27,8 +27,9 @@ router.get('/', function (req, res, next) {
 router.get('/profile', isLoggedIn, async function (req, res, next) {
     const user = await userModel.findOne({ username: req.session.passport.user });
     const post = await postModel.find().populate("user");
-    const count = await postModel.countDocuments();
-    res.render('profile', { user,post,count });
+    const  filter_data =  postModel.find({ "user" : user._id });
+    const count_post = await filter_data.countDocuments();
+    res.render('profile', { user,post,count_post});
 });
 
 router.get('/register', function (req, res, next) {
@@ -77,7 +78,7 @@ router.post('/post', upload.single('postimg'), isLoggedIn, async function (req, 
     user.posts.push(postData._id);
     await user.save();
     
-    res.render('profile', { user});
+    res.redirect('profile');
 });
 
 
