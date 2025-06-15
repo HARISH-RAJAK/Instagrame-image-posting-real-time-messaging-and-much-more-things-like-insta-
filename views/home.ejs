@@ -63,6 +63,8 @@
         <h6>Your Story</h6>
       </div>
 
+      
+
       <div class="story text-center">
         <img src="images/icons/harish.jpg" class="rounded-circle border border-3" alt="story2">
         <h6>Name</h6>
@@ -136,7 +138,7 @@
                 <div class="row align-items-center justify-content-between flex-nowrap">
                   <div class="col-auto">
                     <div class="col-auto icons like-btn"><img src="images/icons/3rdiconhart.jpg" alt="icon3"
-                        class="img-fluid like-icon" onclick="toggleLike(this)" />
+                        class="img-fluid like-icon" onclick="toggleLike(this)" /> <strong><%= post[i].likes.length %></strong>
                     </div>
                   </div>
                   <div class="col-auto">
@@ -152,6 +154,7 @@
                     </div>
                   </div>
                 </div>
+                <%= post[i].title %>
               </div>
             </div>
           </div>

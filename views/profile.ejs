@@ -114,7 +114,9 @@
                 </div>
             </div>
 
-            <div class="col-3"> <%= count_post %> <br>Posts</div>
+            <div class="col-3">
+                <%= count_post %> <br>Posts
+            </div>
             <div class="col-3">120 <br>Followers</div>
             <div class="col-3">116 <br>Following</div>
         </div>
@@ -195,7 +197,7 @@
     <div class="container mt-4">
         <!-- Posts Section -->
         <div class="row text-center content-section g-3" id="posts">
-            <% for(let i= count_post - 1; i>= 0; i--) { %>
+            <% for(let i=count_post - 1; i>= 0; i--) { %>
                 <div class="col-4">
                     <div class="post-img-wrapper">
                         <img src="/images/uploads/<%= post[i].picture %>" alt="Post <%= i+1 %>">

@@ -36,6 +36,17 @@ router.get('/register', function (req, res, next) {
     res.render('register');
 });
 
+router.get('/search', isLoggedIn , function(req,res){
+res.render('search');
+});
+
+router.get('/username/:username',isLoggedIn, async function(req,res){
+const regex = new RegExp(`^${req.params.username}`,'i');
+const user = await userModel.find({username : regex});
+res.json(user);
+
+});
+
 router.get('/home', isLoggedIn, async function (req, res, next) {
     const user = await userModel.findOne({ username: req.session.passport.user });
     const post = await postModel.find().populate('user');
@@ -43,9 +54,46 @@ router.get('/home', isLoggedIn, async function (req, res, next) {
     res.render('home', { user ,post,count });
 });
 
-router.get('/edit', async function (req, res, next) {
+router.get('/edit', isLoggedIn,async function (req, res, next) {
     const user = await userModel.findOne({ username: req.session.passport.user })
     res.render('edit', { user });
+});
+
+router.post('/post', upload.single('postimg'), isLoggedIn, async function (req, res) {
+    try {
+        if (!req.file || !req.body.title) {
+            return res.status(400).send('Missing file or title.');
+        }
+
+        const user = await userModel.findOne({ username: req.session.passport.user });
+
+        const postData = await postModel.create({
+            picture: req.file.filename,
+            user: user._id,
+            title: req.body.title,
+        });
+
+        user.posts.push(postData._id);
+        await user.save();
+
+        res.redirect('/profile');
+    } catch (error) {
+        console.error("Post upload failed:", error);
+        res.status(500).send("Something went wrong.");
+    }
+});
+
+router.post('/post', upload.single('postimg'), isLoggedIn, async function (req, res) {
+    const user = await userModel.findOne({ username: req.session.passport.user });
+    const postData = await postModel.create({
+         picture : req.file.filename,
+         user : user._id,
+         title : req.body.title,
+    });
+    user.posts.push(postData._id);
+    await user.save();
+    
+    res.redirect('/profile');
 });
 
 router.post('/edit', upload.single('profilePic'), async function (req, res, next) {
@@ -66,19 +114,6 @@ router.post('/edit', upload.single('profilePic'), async function (req, res, next
 
     await user.save();
     res.redirect('/profile');
-});
-
-router.post('/post', upload.single('postimg'), isLoggedIn, async function (req, res) {
-    const user = await userModel.findOne({ username: req.session.passport.user });
-    const postData = await postModel.create({
-         picture : req.file.filename,
-         user : user._id,
-         title : req.body.title,
-    });
-    user.posts.push(postData._id);
-    await user.save();
-    
-    res.redirect('profile');
 });
 
 
